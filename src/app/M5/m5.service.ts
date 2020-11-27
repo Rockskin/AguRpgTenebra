@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { GlosseryOfTheDamned } from './m5.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -9,13 +8,15 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class M5Service {
 
-  readonly rootURL = 'http://localhost:51024/api';
-  glosseryOfTheDamneds;
+  glosseryOfTheDamneds = [];
+
+  private readonly REST_API_SERVER  = 'http://localhost:51024/api';
+
   constructor(private http: HttpClient) {
 
   }
 
-  public getGlossery(): Observable<any> {
-    return this.http.get<any>(`${this.rootURL}/GlosseryOfTheDamneds/`);
+  public getGlossery(){
+    return this.http.get(`${this.REST_API_SERVER}/GlosseryOfTheDamneds/`);
   }
 }
