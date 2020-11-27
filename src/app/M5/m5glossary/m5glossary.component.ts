@@ -8,11 +8,11 @@ import { M5Service } from '../m5.service';
 })
 export class M5glossaryComponent implements OnInit {
 
-  glosserys: any;
+  glosserys: any[];
   constructor(private m5Service: M5Service) { }
 
   ngOnInit(): void {
-    this.m5Service.getGlossery().subscribe(data => {
+    this.m5Service.getGlossery().subscribe((data: any[]) => {
       this.glosserys = data;
     });
   }
