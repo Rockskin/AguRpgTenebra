@@ -3,7 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-typography{
-  background-color: #B9AE9C;
+  background-color: #141518;
 }
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
@@ -20,3 +20,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float: left;
+}

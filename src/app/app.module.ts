@@ -7,10 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { M5glossaryComponent } from './/M5/m5glossary/m5glossary.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { TopComponent } from './nav/top/top.component';
 
 @NgModule({
   declarations: [
-    AppComponent, M5glossaryComponent
+    AppComponent, M5glossaryComponent, HomeComponent, TopComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatButtonToggleModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
